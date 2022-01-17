@@ -10,6 +10,7 @@ export default function TabOneScreen() {
         data={chatRoomsData}
         renderItem={({ item }) => <ChatRoomItem chatRoom={item} />}
         showsVerticalScrollIndicator={false}
+        ListHeaderComponent={() => <Text>Messages</Text>}
       />
     </View>
   );
