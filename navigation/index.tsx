@@ -105,9 +105,8 @@ const HomeHeader = (props) => {
         style={{
           flex: 1,
           textAlign: "center",
-          marginLeft: 50,
+          marginLeft: 40,
           fontWeight: "bold",
-          fontSize: 16,
         }}
       >
         CHAT
