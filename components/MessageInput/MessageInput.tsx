@@ -20,13 +20,13 @@ const MessageInput = () => {
   const [message, setMessage] = useState("");
 
   const sendMessage = () => {
-    // console.warn("sending: ", message);
+    console.warn("sending: ", message);
 
     setMessage("");
   };
 
   const onPlusClicked = () => {
-    // console.warn("On plus Clicked");
+    console.warn("On plus Clicked");
   };
 
   const onPress = () => {

@@ -10,7 +10,6 @@ export default function ChatRoomItem({ chatRoom }) {
 
   const onPress = () => {
     console.warn("pressed on: ", user.name);
-    // navigation.navigate("ChatRoom", { id: chatRoom.id });
     navigation.navigate("ChatRoom", { id: chatRoom.id });
   };
 
