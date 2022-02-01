@@ -1,17 +1,40 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image, FlatList } from "react-native";
+import {
+  Text,
+  StyleSheet,
+  View,
+  Image,
+  FlatList,
+  Pressable,
+} from "react-native";
 import ChatRoomItem from "../components/ChatRoomItem";
 import chatRoomsData from "../assets/dummy-data/ChatRooms";
+import { Auth } from "aws-amplify";
 
 export default function TabOneScreen() {
+  const logOut = () => {
+    Auth.signOut();
+  };
   return (
     <View style={styles.page}>
       <FlatList
         data={chatRoomsData}
         renderItem={({ item }) => <ChatRoomItem chatRoom={item} />}
         showsVerticalScrollIndicator={false}
-        ListHeaderComponent={() => <Text>Messages</Text>}
       />
+      <Pressable
+        onPress={logOut}
+        style={{
+          backgroundColor: "red",
+          height: 50,
+          margin: 10,
+          borderRadius: 50,
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <Text>Logout</Text>
+      </Pressable>
     </View>
   );
 }
